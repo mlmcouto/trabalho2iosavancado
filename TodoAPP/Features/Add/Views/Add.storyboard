@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QUL-am-Zan">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add View Controller-->
+        <scene sceneID="byE-ha-cKK">
+            <objects>
+                <viewController id="QUL-am-Zan" customClass="AddViewController" customModule="TodoAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CC4-te-nmS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pp0-nS-hSq">
+                                <rect key="frame" x="0.0" y="44" width="8" height="818"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="8" id="rEx-yb-WNN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GB9-rl-KXQ" customClass="CircleButton" customModule="TodoAPP" customModuleProvider="target">
+                                <rect key="frame" x="24" y="60" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.024323731660842896" green="0.97375959157943726" blue="0.20645219087600708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GB9-rl-KXQ" secondAttribute="height" multiplier="1:1" id="EzY-SD-Cda"/>
+                                    <constraint firstAttribute="width" constant="40" id="xBS-Zw-E3f"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.left" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YEs-R2-VcH">
+                                <rect key="frame" x="24" y="140" width="374" height="498"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's up today?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zw9-NC-1ZC">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gP2-rI-JvM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70l-oo-NWI">
+                                        <rect key="frame" x="0.0" y="58" width="374" height="216"/>
+                                    </pickerView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qml-6g-pww">
+                                        <rect key="frame" x="0.0" y="282" width="374" height="216"/>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwc-Vw-LQj" customClass="CircleButton" customModule="TodoAPP" customModuleProvider="target">
+                                <rect key="frame" x="87" y="776" width="240" height="70"/>
+                                <color key="backgroundColor" red="0.7725490196" green="0.90588235289999997" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="xLU-Sw-RW9"/>
+                                    <constraint firstAttribute="width" constant="240" id="y2f-aA-zcr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pp0-nS-hSq" firstAttribute="leading" secondItem="tjc-Ff-Lqr" secondAttribute="leading" id="6Ss-ZV-zW0"/>
+                            <constraint firstItem="YEs-R2-VcH" firstAttribute="top" secondItem="GB9-rl-KXQ" secondAttribute="bottom" constant="40" id="6W5-qK-838"/>
+                            <constraint firstItem="kwc-Vw-LQj" firstAttribute="centerX" secondItem="CC4-te-nmS" secondAttribute="centerX" id="D5z-QT-jcE"/>
+                            <constraint firstItem="tjc-Ff-Lqr" firstAttribute="trailing" secondItem="YEs-R2-VcH" secondAttribute="trailing" constant="16" id="ETG-wN-CLp"/>
+                            <constraint firstItem="YEs-R2-VcH" firstAttribute="leading" secondItem="pp0-nS-hSq" secondAttribute="trailing" constant="16" id="LZX-Qt-IDk"/>
+                            <constraint firstItem="pp0-nS-hSq" firstAttribute="top" secondItem="tjc-Ff-Lqr" secondAttribute="top" id="a2K-5o-k56"/>
+                            <constraint firstItem="pp0-nS-hSq" firstAttribute="bottom" secondItem="tjc-Ff-Lqr" secondAttribute="bottom" id="eJ5-Lj-mKe"/>
+                            <constraint firstItem="GB9-rl-KXQ" firstAttribute="top" secondItem="tjc-Ff-Lqr" secondAttribute="top" constant="16" id="eUV-r2-4Rr"/>
+                            <constraint firstItem="GB9-rl-KXQ" firstAttribute="leading" secondItem="pp0-nS-hSq" secondAttribute="trailing" constant="16" id="j1c-SU-SyD"/>
+                            <constraint firstItem="tjc-Ff-Lqr" firstAttribute="bottom" secondItem="kwc-Vw-LQj" secondAttribute="bottom" constant="16" id="uvu-Te-L8w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tjc-Ff-Lqr"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="GB9-rl-KXQ" id="bhz-It-pPm"/>
+                        <outlet property="datePicker" destination="Qml-6g-pww" id="RcA-dI-xti"/>
+                        <outlet property="saveButton" destination="kwc-Vw-LQj" id="28i-8U-kLD"/>
+                        <outlet property="sideView" destination="pp0-nS-hSq" id="6Ij-YH-xk2"/>
+                        <outlet property="todoTextField" destination="zw9-NC-1ZC" id="as0-mx-cqd"/>
+                        <outlet property="typePicker" destination="70l-oo-NWI" id="0kf-Nj-9sb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jd-AO-uXa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.739130434782609" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
+    </resources>
+</document>

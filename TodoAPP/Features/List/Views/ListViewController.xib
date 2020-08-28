@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="TodoAPP" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="3BT-uI-Q91" id="mgM-Ro-AXM"/>
+                <outlet property="fabButton" destination="xNd-bZ-RUg" id="Xgx-4m-PR7"/>
+                <outlet property="tableView" destination="x4a-ac-80f" id="3L2-GL-cgm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="x4a-ac-80f">
+                    <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="jKO-B9-xdV">
+                    <rect key="frame" x="16" y="56" width="382" height="46"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngtree-abstract-colourful--background-image_283352" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nh-K2-OdQ" customClass="CircleImageView" customModule="TodoAPP" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="46" id="uur-QI-XdM"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQB-lA-fPJ">
+                            <rect key="frame" x="136.5" y="0.0" width="109" height="46"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4i-CE-RF1">
+                            <rect key="frame" x="336" y="0.0" width="46" height="46"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="plus" catalog="system"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="dI7-mk-QLK"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="e4i-CE-RF1" firstAttribute="width" secondItem="2nh-K2-OdQ" secondAttribute="width" id="a9A-Uf-UKY"/>
+                        <constraint firstItem="2nh-K2-OdQ" firstAttribute="width" secondItem="jKO-B9-xdV" secondAttribute="height" multiplier="1:1" id="b6T-gN-XID"/>
+                        <constraint firstItem="WQB-lA-fPJ" firstAttribute="centerY" secondItem="jKO-B9-xdV" secondAttribute="centerY" id="fKd-Xg-sgc"/>
+                        <constraint firstItem="2nh-K2-OdQ" firstAttribute="top" secondItem="jKO-B9-xdV" secondAttribute="top" id="wWm-Dw-7FI"/>
+                        <constraint firstItem="e4i-CE-RF1" firstAttribute="centerY" secondItem="jKO-B9-xdV" secondAttribute="centerY" id="yEF-B6-9XO"/>
+                    </constraints>
+                </stackView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3BT-uI-Q91">
+                    <rect key="frame" x="0.0" y="104" width="414" height="766"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sqv-Yq-s71">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNd-bZ-RUg" customClass="CircleButton" customModule="TodoAPP" customModuleProvider="target">
+                    <rect key="frame" x="332" y="796" width="74" height="74"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="74" id="alO-Yl-ouh"/>
+                        <constraint firstAttribute="width" secondItem="xNd-bZ-RUg" secondAttribute="height" multiplier="1:1" id="zFn-TY-EzD"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <state key="normal" image="plus" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22" scale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="g98-08-BR9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="x4a-ac-80f" firstAttribute="top" secondItem="jKO-B9-xdV" secondAttribute="top" constant="48" id="9S3-sn-ey4"/>
+                <constraint firstAttribute="bottom" secondItem="x4a-ac-80f" secondAttribute="bottom" id="KS5-if-jYI"/>
+                <constraint firstItem="jKO-B9-xdV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="Lbf-Jn-Acf"/>
+                <constraint firstItem="x4a-ac-80f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NGM-68-Fcd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jKO-B9-xdV" secondAttribute="trailing" constant="16" id="TQo-hh-5QN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xNd-bZ-RUg" secondAttribute="trailing" constant="8" id="TmQ-xz-oQ8"/>
+                <constraint firstItem="jKO-B9-xdV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ZXf-jN-EK0"/>
+                <constraint firstItem="x4a-ac-80f" firstAttribute="leading" secondItem="jKO-B9-xdV" secondAttribute="trailing" constant="-398" id="c0N-i7-dVd"/>
+                <constraint firstItem="xNd-bZ-RUg" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="8" id="etN-LK-fs6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="x4a-ac-80f" secondAttribute="trailing" id="meF-EI-GtM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="150.66964285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="pngtree-abstract-colourful--background-image_283352" width="640" height="640"/>
+    </resources>
+</document>

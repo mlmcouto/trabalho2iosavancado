@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="H6y-Ih-v7G" customClass="ListCollectionViewCell" customModule="TodoAPP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="198" height="228"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kq7-WY-2EV">
+                <rect key="frame" x="0.0" y="0.0" width="198" height="228"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyF-iD-gNL">
+                        <rect key="frame" x="16" y="16" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Td-Tg-7Kq">
+                        <rect key="frame" x="0.0" y="52.5" width="198" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="xHQ-m4-uLy"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jiB-Ls-gKP">
+                        <rect key="frame" x="16" y="60.5" width="58" height="93.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MG-3Q-W1j">
+                                <rect key="frame" x="8" y="8" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAv-DV-net">
+                                <rect key="frame" x="8" y="36.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fo2-mM-aLD">
+                                <rect key="frame" x="8" y="65" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" name="daily_Color"/>
+                <constraints>
+                    <constraint firstItem="hyF-iD-gNL" firstAttribute="leading" secondItem="kq7-WY-2EV" secondAttribute="leadingMargin" id="Bl6-fu-ct1"/>
+                    <constraint firstItem="7Td-Tg-7Kq" firstAttribute="centerX" secondItem="kq7-WY-2EV" secondAttribute="centerX" id="EiU-oB-jc3"/>
+                    <constraint firstItem="jiB-Ls-gKP" firstAttribute="top" secondItem="7Td-Tg-7Kq" secondAttribute="top" constant="8" id="Pov-r8-JFk"/>
+                    <constraint firstItem="7Td-Tg-7Kq" firstAttribute="top" secondItem="kq7-WY-2EV" secondAttribute="top" constant="52.5" id="f8b-gN-fpw"/>
+                    <constraint firstItem="7Td-Tg-7Kq" firstAttribute="leading" secondItem="kq7-WY-2EV" secondAttribute="leading" id="fTb-6O-Nhp"/>
+                    <constraint firstItem="hyF-iD-gNL" firstAttribute="leading" secondItem="jiB-Ls-gKP" secondAttribute="leading" id="iHM-Dl-nb7"/>
+                    <constraint firstItem="7Td-Tg-7Kq" firstAttribute="top" secondItem="hyF-iD-gNL" secondAttribute="bottom" constant="16" id="uVU-M7-Rt5"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="198" height="228"/>
+            <point key="canvasLocation" x="-30" y="14"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="daily_Color">
+            <color red="0.31372549019607843" green="0.51372549019607838" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
